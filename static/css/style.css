@@ -1,0 +1,12 @@
+h1 {
+	size: 18
+}
+
+p {
+	size: 12;
+	color: red;
+}
+body {
+	margin: 0;
+	background-color: #000000;
+}

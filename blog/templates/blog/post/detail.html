@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>{{ post.title }}</title>
+		<link href="https://fonts.googleapis.com/css?family=Contrail+One|Lobster+Two|Ramabhadra|Strait" rel="stylesheet">
+		<link rel="shortcut icon" href="{%static 'images/icon.png'%}" type="image/png">
+		<link href="{% static "css/main.css" %}" rel="stylesheet">
+		<script type="text/javascript" src="/static/js/jquery-2.0.2.min.js"></script>
+		<script type="text/javascript" src="/static/js/main.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+	</head>
+
+	<body class="landing">
+		<div class="logo-text" style="font-family: 'Lobster Two', cursive">
+			<a href="javascript:history.back()">Back</a>
+		</div>
+		<main class="post">
+			<div>
+				<div class="post-header">
+					<h1>{{ post.title }}</h1>
+				</div>
+				{{ post.body|linebreaks }}
+				<p class="date">
+					{{ post.publish }}
+				</p>
+			</div>
+		</main>
+		<footer class="comments-background">
+				{% for comment in comments %}
+					<div class="comment">
+						By {{ comment.name }}, {{ comment.created }} <br/><br/> <b>{{ comment.body }}</b>
+					</div>
+					<br />
+				{% endfor %}
+			<div class="comment_form">
+				<form method="post">
+					{% csrf_token %}
+					{{ form.as_p }}
+					<input type="submit" value="Send" class="comment_form_send">
+				</form>
+			</div>
+		</footer>
+		<div id="loading">
+			<noscript><meta http-equiv="Refresh" content="0; url=/badbrowser"></noscript>
+			<div id="loading-center">
+				<div id="loading-center-absolute">
+					<div class="object" id="object_one"></div>
+					<div class="object" id="object_two"></div>
+					<div class="object" id="object_three"></div>
+					<div class="object" id="object_four"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

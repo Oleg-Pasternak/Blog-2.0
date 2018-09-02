@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>404 NotFound</title>
+    <link href="https://fonts.googleapis.com/css?family=Contrail+One|Lobster+Two|Ramabhadra|Strait" rel="stylesheet">
+    <link rel="shortcut icon" href="{%static 'images/icon.png'%}" type="image/png">
+    <link href="{% static "css/main.css" %}" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page404-window">
+      <div class="page404-head">
+        <a href="/" class="js-error_logo">Pasternak</a>
+      </div>
+      <div class="page404">
+        <h1>404</h1>
+        <p>Not Found</p>
+      </div>
+    </div>
+    <div id="loading">
+      <div id="loading-center">
+        <div id="loading-center-absolute">
+          <div class="object" id="object_one"></div>
+          <div class="object" id="object_two"></div>
+          <div class="object" id="object_three"></div>
+          <div class="object" id="object_four"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!--Scripts -->
+	<script type="text/javascript" src="static/js/jquery-2.0.2.min.js"></script>
+	<script type="text/javascript" src="static/js/main.js"></script>
+</html>

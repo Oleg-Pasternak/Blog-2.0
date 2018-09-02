@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Contrail+One|Lobster+Two|Ramabhadra|Strait" rel="stylesheet">
+    <link rel="shortcut icon" href="{%static 'images/icon.png'%}" type="image/png">
+    <link href="{% static "css/main.css" %}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You are using an outdated browser</title>
+  </head>
+  <body class="lading">
+    <div class="js_window">
+      <div class="js-error_head">
+        <a href="/" class="js-error_logo">Pasternak</a>
+      </div>
+      <div class="js-error_content">
+        <h1>To work with the site you need Javascript support</h1>
+        <p>To use all the features of the site, download and install <a href="https://www.mozilla.org/ru/firefox/new/" target="_blank">Firefox</a></p>
+      </div>
+    </div>
+  </body>
+</html>

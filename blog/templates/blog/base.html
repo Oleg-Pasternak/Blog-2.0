@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Contrail+One|Lobster+Two|Ramabhadra|Strait" rel="stylesheet">
+		<link rel="shortcut icon" href="{%static 'images/icon.png'%}" type="image/png">
+		<link href="{% static "css/main.css" %}" rel="stylesheet">
+		<title>{% block title %}{% endblock %}</title>
+		<noscript><meta http-equiv="Refresh" content="0; url=/badbrowser"></noscript>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body class="landing">
+	        <header id="banner">
+						<div class="logo-text">
+							<a href="/">Pasternak</a></h1>
+						</div>
+	          <h2>Django is awesome</h2>
+	          <p>How it's work <a href="https://www.djangoproject.com/" target="_blank">Learn more</a>.</p>
+	        </header>
+	        <main class="posts">
+	            {% block content %}
+	            {% endblock %}
+	        </main>
+	        <footer>
+	            {% include "blog/pagination.html" with page=page_obj %}
+	        </footer>
+					<div id="loading">
+						<div id="loading-center">
+							<div id="loading-center-absolute">
+								<div class="object" id="object_one"></div>
+								<div class="object" id="object_two"></div>
+								<div class="object" id="object_three"></div>
+								<div class="object" id="object_four"></div>
+							</div>
+						</div>
+					</div>
+	</body>
+	<!--Scripts -->
+	<script type="text/javascript" src="static/js/jquery-2.0.2.min.js"></script>
+	<script type="text/javascript" src="static/js/main.js"></script>
+	<!-- developer Oleg Pasternak -->
+</html>
